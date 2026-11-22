@@ -3,26 +3,22 @@
     "title": "GEO & AI Readiness Audit Dataset",
     "description": "Dataset schema for website GEO and AI readiness audit results.",
     "fields": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object",
         "properties": {
             "url": {
                 "type": "string",
                 "title": "Input URL",
-                "description": "Original URL submitted for auditing.",
-                "example": "https://apify.com"
+                "description": "Original URL submitted for auditing."
             },
             "finalUrl": {
                 "type": "string",
                 "title": "Final URL",
-                "description": "Resolved destination URL after following redirects.",
-                "example": "https://apify.com/"
+                "description": "Resolved destination URL after following redirects."
             },
             "geoScore": {
                 "type": "number",
                 "title": "GEO Score",
-                "description": "Overall GEO and AI readiness score from 0 to 100.",
-                "example": 100
+                "description": "Overall GEO and AI readiness score from 0 to 100."
             },
             "status": {
                 "type": "string",
@@ -31,8 +27,7 @@
                 "enum": [
                     "ok",
                     "error"
-                ],
-                "example": "ok"
+                ]
             },
             "recommendations": {
                 "type": "array",
@@ -40,14 +35,12 @@
                 "description": "Actionable GEO and AI readiness improvements identified during the audit.",
                 "items": {
                     "type": "string"
-                },
-                "example": []
+                }            
             },
             "auditedAt": {
                 "type": "string",
                 "title": "Audited At",
-                "description": "UTC ISO-8601 timestamp of when the audit completed.",
-                "example": "2026-11-22T15:00:00+00:00"
+                "description": "UTC ISO-8601 timestamp of when the audit completed."
             }
         },
         "required": [
