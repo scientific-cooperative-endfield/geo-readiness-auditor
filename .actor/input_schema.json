@@ -1,0 +1,41 @@
+{
+    "title": "GEO & AI Readiness Website Auditor Input",
+    "description": "Configure the list of website URLs to audit for Generative Engine Optimization (GEO) and AI crawler readiness.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "urls": {
+            "title": "Website URLs",
+            "type": "array",
+            "description": "List of website URLs to audit for AI readiness, llms.txt, robots.txt AI bot rules, JSON-LD, SSR visibility, and metadata.",
+            "editor": "stringList",
+            "prefill": [
+                "https://stripe.com",
+                "https://apify.com"
+            ],
+            "example": [
+                "https://stripe.com",
+                "https://apify.com"
+            ]
+        },
+        "maxConcurrency": {
+            "title": "Max Concurrency",
+            "type": "integer",
+            "description": "Maximum number of websites audited concurrently.",
+            "default": 5,
+            "minimum": 1,
+            "maximum": 50
+        },
+        "timeoutSecs": {
+            "title": "Request Timeout (seconds)",
+            "type": "integer",
+            "description": "HTTP request timeout in seconds for each fetched resource.",
+            "default": 15,
+            "minimum": 5,
+            "maximum": 60
+        }
+    },
+    "required": [
+        "urls"
+    ]
+}
