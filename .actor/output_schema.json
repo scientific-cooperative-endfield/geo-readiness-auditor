@@ -2,7 +2,6 @@
     "actorOutputSchemaVersion": 1,
     "title": "GEO & AI Readiness Audit Results",
     "description": "Output schema for the GEO & AI Readiness Website Auditor Actor.",
-    "type": "object",
     "properties": {
         "results": {
             "type": "string",
